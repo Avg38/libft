@@ -1,0 +1,5 @@
+*/.vscode/launch.json
+*.o
+*.out
+*.exe
+/obj
