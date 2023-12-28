@@ -6,7 +6,7 @@
 /*   By: avialle- <avialle-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 16:59:43 by avialle-          #+#    #+#             */
-/*   Updated: 2023/12/28 13:13:34 by avialle-         ###   ########.fr       */
+/*   Updated: 2023/12/28 14:27:33 by avialle-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,37 @@
 # include <stdarg.h>
 # include <stdio.h>
 
+/*-----------------------ft_printf-----------------------*/
+void	ft_print_char(int c, size_t *len);
+void	ft_print_str(char *str, size_t *len);
+void	ft_print_ptr(unsigned long long addr, size_t *len);
+void	ft_print_nbr(int nb, size_t *len);
+void	ft_print_hexa(unsigned int nb, char *base, size_t *len);
+void	ft_print_unsigned(unsigned int nb, size_t *len);
+int		ft_printf(const char *str, ...);
+
+/*--------------------------gnl--------------------------*/
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 5
+# endif
+
+# ifndef MAX_FD
+#  define MAX_FD 1024
+# endif
+
+typedef struct s_fd
+{
+	int		fd;
+	char	buffer[BUFFER_SIZE + 1];
+}	t_fd;
+
+char	*get_next_line(int fd);
+size_t	check_newline(char *str);
+size_t	ft_strlen_gnl(char *str);
+char	*str_init(char	*line);
+char	*buffer_init(int fd, t_fd *buffer_memory);
+
+/*-------------------------libft-------------------------*/
 int		ft_atoi(const char *nptr);
 void	ft_bzero(void *s, size_t n);
 void	*ft_calloc(size_t nmemb, size_t size);

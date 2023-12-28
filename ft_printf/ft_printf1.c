@@ -6,11 +6,11 @@
 /*   By: avialle- <avialle-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 14:36:42 by avialle-          #+#    #+#             */
-/*   Updated: 2023/12/12 11:02:10 by avialle-         ###   ########.fr       */
+/*   Updated: 2023/12/28 14:28:19 by avialle-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../libft.h"
 
 void	ft_print_char(int c, size_t *len)
 {
