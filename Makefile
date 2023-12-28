@@ -63,7 +63,7 @@ CFLAGS	= -Wall -Wextra -Werror
 
 RM	= rm -rf
 
-%.o:	%.c libft.h test
+%.o:	%.c libft.h
 	@${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
 ${NAME}:	${OBJS}
