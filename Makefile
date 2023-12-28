@@ -49,6 +49,9 @@ SRCS	=	\
 			\
 			ft_printf/ft_printf1.c\
 			ft_printf/ft_printf2.c\
+			\
+			GNL/get_next_line.c\
+			GNL/get_next_line_utils.c\
 
 OBJS	= ${SRCS:.c=.o}
 
