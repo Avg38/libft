@@ -63,7 +63,7 @@ CFLAGS	= -Wall -Wextra -Werror
 
 RM	= rm -rf
 
-%.o:	%.c libft.h ft_printf.h
+%.o:	%.c libft.h ft_printf/ft_printf.h GNL/get_next_line.h
 	@${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
 ${NAME}:	${OBJS}
